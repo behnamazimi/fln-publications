@@ -50,7 +50,7 @@ export default function FilterForm({onChange}) {
   return (
       <StyledFilterForm onSubmit={e => e.preventDefault()}
                         data-testid={"filter-form"}>
-        <Loading active={!state.loading}/>
+        <Loading active={state.loading}/>
         <input placeholder={"Search by name"}
                onChange={e => handleFieldChange("trend", e.target.value)}
                value={fields.trend}
